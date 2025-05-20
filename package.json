@@ -23,29 +23,28 @@
     "electron": "^36.2.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "update-electron-app": "^3.1.1"
   },
   "build": {
-  "appId": "com.example.myapp",
-  "productName": "MyApp",
-  "directories": {
-    "output": "dist"
-  },
-  "files": [
-    "build/**/*",
-    "node_modules/**/*",
-    "package.json"
-  ],
-  "win": {
-    "target": "nsis"
-  },
-  "mac": {
-    "target": "dmg"
-  },
-  "linux": {
-    "target": "AppImage"
+    "appId": "com.example.myapp",
+    "productName": "MyApp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
-}
-
-  
 }

@@ -30,3 +30,12 @@ steps:
   - script: npm run make
     displayName: 'Publish Electron App'
 
+  - task: UniversalPackages@0
+    displayName: Publish
+    inputs:
+      command: publish
+      publishDirectory: '$(Build.ArtifactStagingDirectory)'        ## Location of the files you wish to publish
+      vstsFeedPublish: 'markcame/setools-feed'                ## The project and feed name to publish to. If you're working with an organization-scoped feed, specify only the feed name
+      vstsFeedPackagePublish: 'setools'                     ## The package name. Must be lower case. Use only letters, numbers, and dashes
+      packagePublishDescription: 'Making Case Communication Easier'           ## Description of the package content
+
