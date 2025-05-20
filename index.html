@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    .w3-top {position:sticky;}
+    .w3-bottom {position:sticky}
+
+
+    <title> SETools </title>
+</head>
+
+<body background="black">
+
+    <div id="navbar" class="w3-container w3-top w3-bar w3-dark-grey">
+        <a href="#feedback" class=" w3-bar-item w3-button">Feedback</a>
+    </div>
+
+    <div id="application" class='w3-cell-row w3-black w3-padding-64'>
+        <div id="summarizer" class="w3-container w3-margin ">
+            <div id="left_input" class=" w3-cell w3-half  w3-row-padding ">
+                <div id="summaryboxcontainer" class="w3-container">
+                    <h2>Summary</h2>
+                    <textarea id="summarybox" rows="4" cols="70" py-keyup="update_summary" class="w3-grey"></textarea>
+                </div>
+
+                <div id="currentactionboxcontainer" class="w3-container w3-cell-middle" spellcheck="true">
+                    <h2>Current Action</h2>
+                    <textarea id="currentactionbox" rows="4" cols="70" py-keyup="update_currentaction"
+                        class="w3-grey"></textarea>
+                </div>
+
+                <div id="nextactionboxcontainer" class="w3-container w3-cell-middle" spellcheck="true">
+                    <h2>Next Action</h2>
+                    <textarea id="nextactionbox" rows="4" cols="70" py-keyup="update_nextaction"
+                        class="w3-grey"></textarea>
+                </div>
+
+                <div id="declareactionscontainer" class="w3-container w3-cell-middle" spellcheck="true">
+                    <h2>Who Owns the Actions?</h2>
+                    <p>Current Action Owner : <select id="currentownerselect" py-click="update_current_action_owners"
+                            class="w3-grey">
+                            <option value="Support">Support</option>
+                            <option value="Customer">Customer</option>
+                            <option value="ProductGroup">Product Group</option>
+                            <option value="CSAM/CSA/Accounts">CSAM/CSA/Accounts
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>Next Action Owners <select id="nextownerselect" py-click="update_next_action_owners"
+                            class="w3-grey">
+                            <option value="Support">Support</option>
+                            <option value="Customer">Customer</option>
+                            <option value="ProductGroup">Product Group</option>
+                            <option value="CSAM/CSA/Accounts">CSAM/CSA/Accounts
+                            </option>
+                        </select>
+                    </p>
+                </div>
+
+                <div id="nextcontactcontainer" class="w3-container w3-cell-middle">
+                    <h2>Next Contact Date</h2>
+                    <input type="datetime-local" id="nextcontactdatetime" class="w3-grey">
+                    <button class="w3-button" id="datetimelocalbutton" py-click="update_next_contact_date">Add
+                        Date</button>
+                </div>
+
+            </div>
+
+            <div id="rightoutput" class="w3-cell w3-half w3-row-padding" style="font-family: monospace">
+                <h2 class=" w3-center">Output</h2>
+                <div id="outputtext">
+                    <p>======================================================================<br>
+                        | Summary<br>
+                        ===================================</p>
+                    <p id="summaryoutput"></p>
+                    <p>===================================<br>
+                        | Current Action<br>
+                        ===================================</p>
+                    <p id="currentactionoutput"></p>
+                    <p>===================================<br>
+                        | Next Action<br>
+                        ===================================</p>
+                    <p id="nextactionoutput"></p>
+                    <p>===================================<br>
+                        | Action Owners<br>
+                        ===================================</p>
+                    <p id="actionownersoutput">
+                        Current Action :
+                    <p id="currentactionselectout"></p>
+                    Next Action : <p id="nextactionselectout"></p>
+                    <p>===================================<br>
+                        | Next Contact<br>
+                        ===================================</p>
+                    <p id="nextcontactoutput"></p>
+                    <p>===================================</p>
+                    <p>======================================================================</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="buttonscontainer" class="w3-bottom w3-bar w3-dark-grey">
+            <button id="copyinfo" class="w3-container w3-bar-item w3-button" py-click="copy_to_clipboard">Copy to
+                Clipboard</button>
+            <button id="resetinfo" class="w3-container w3-bar-item w3-button" py-click="reset_all_fields">Reset Form</button>
+        </div>
+    </div>
+
+
+    <script type="py" src="./source/main.py" config="pyscript.toml"></script>
+</body>
