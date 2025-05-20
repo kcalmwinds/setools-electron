@@ -23,6 +23,7 @@ steps:
     inputs:
       pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'electron-build'
+      publishLocation: 'Container'
 
 
 
