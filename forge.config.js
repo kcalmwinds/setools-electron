@@ -8,10 +8,10 @@ module.exports = {
     makers: [
       {
         name: '@electron-forge/maker-squirrel',
-        config: {
+        /*config: {
           certificateFile: 'C:/pyproj/cert/mycert.pfx',
           certificatePassword: process.env.CERTIFICATE_PASSWORD
-        }
+        }*/
       }
     ]
 
