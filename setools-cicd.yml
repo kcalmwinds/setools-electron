@@ -21,8 +21,10 @@ steps:
 
   - task: PublishBuildArtifacts@1
     inputs:
-      pathToPublish: 'out/'
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'electron-build'
+
+
 
   - script: npm run make
     displayName: 'Publish Electron App'
