@@ -1,6 +1,6 @@
 {
   "name": "setools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of tools to enable better communication of tasks.",
   "main": "main.js",
   "scripts": {
