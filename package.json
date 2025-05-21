@@ -19,10 +19,9 @@
     "@electron-forge/maker-zip": "^7.8.1",
     "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
     "@electron-forge/plugin-fuses": "^7.8.1",
-    "@electron-forge/publisher-github": "^7.8.1",
     "@electron/fuses": "^1.8.0",
     "electron": "^36.2.0"
-  },
+  }, 
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
     "electron-updater": "^6.6.2",
@@ -35,13 +34,13 @@
       "output": "dist"
     },
     "build": {
-      "publish": [
-        {
-          "provider": "generic",
-          "url": "https://dev.azure.com/markcame/The%20Tools%20Project/_artifacts/feed/setools-feeds/UPack/setools/overview/"
-        }
-      ]
-    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://github.com/kcalmwinds/setools-electron.git"
+      }
+    ]
+  },
     "files": [
       "build/**/*",
       "node_modules/**/*",
@@ -57,4 +56,5 @@
       "target": "AppImage"
     }
   }
+  
 }
