@@ -34,10 +34,10 @@ steps:
       command: publish
       publishDirectory: '$(Build.ArtifactStagingDirectory)'        ## Location of the files you wish to publish
       vstsFeedPublish: 'setools-feeds'                ## The project and feed name to publish to. If you're working with an organization-scoped feed, specify only the feed name
-      vstsFeedPackagePublish: 'setools'                     ## The package name. Must be lower case. Use only letters, numbers, and dashes
+      vstsFeedPackagePublish: 'setools-ubuntu'                     ## The package name. Must be lower case. Use only letters, numbers, and dashes
       packagePublishDescription: 'Making Case Communication Easier'           ## Description of the package content
       versionOption: custom                                             ## Select a versioning strategy. Options: `major`, `minor`, `patch`, `custom`
-      versionPublish: '1.0.1'                               ## The custom package version
+      versionPublish: '1.0.3'                               ## The custom package version
 
 
 
