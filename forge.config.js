@@ -48,7 +48,7 @@ module.exports = {
     }
   ],
 
-
+{
   // Fuses are used to enable/disable various Electron functionality
   // at package time, before code signing the application
   new FusesPlugin({
@@ -59,6 +59,6 @@ module.exports = {
     [FuseV1Options.EnableNodeCliInspectArguments]: false,
     [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
     [FuseV1Options.OnlyLoadAppFromAsar]: true,
-  })
+  });
   
 }
