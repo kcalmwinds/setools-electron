@@ -52,12 +52,4 @@ module.exports = {
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
   ],
-  module.exports = {
-  packagerConfig: {},
-  makers: [
-    {
-      name: '@electron-forge/maker-zip'
-    }
-  ],
-  };
 };
