@@ -1,6 +1,6 @@
 {
   "name": "setools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of tools to enable better communication of tasks.",
   "main": "main.js",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
+    "electron-updater": "^6.6.2",
     "update-electron-app": "^3.1.1"
   },
   "build": {
@@ -32,6 +33,14 @@
     "directories": {
       "output": "dist"
     },
+    "build": {
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://dev.azure.com/markcame/The%20Tools%20Project/_artifacts/feed/setools-feeds/UPack/setools/overview/"
+      }
+    ]
+  },
     "files": [
       "build/**/*",
       "node_modules/**/*",
@@ -47,4 +56,5 @@
       "target": "AppImage"
     }
   }
+  
 }

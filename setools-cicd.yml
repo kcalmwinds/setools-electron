@@ -6,8 +6,20 @@
 trigger:
   - main
 
-pool:
-  vmImage: 'windows-latest'
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: echo hello from Linux
+- job: macOS
+  pool:
+    vmImage: 'macOS-latest'
+  steps:
+  - script: echo hello from macOS
+- job: Windows
+  pool:
+    vmImage: 'windows-latest'
 
 steps:
   - task: UseNode@1
@@ -38,5 +50,6 @@ steps:
       packagePublishDescription: 'Making Case Communication Easier'           ## Description of the package content
       versionOption: custom                                             ## Select a versioning strategy. Options: `major`, `minor`, `patch`, `custom`
       versionPublish: '1.0.1'                               ## The custom package version
+
 
 
